@@ -1,19 +1,10 @@
-# :earth_americas: GDP dashboard template
+import streamlit as st
 
-A simple Streamlit app showing the GDP of different countries in the world.
+# Title of the app
+st.title("Age Slider Example")
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+# Age slider for selecting a single value
+age = st.slider("How old are you?", min_value=0, max_value=130, value=25)
 
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+# Display the selected age
+st.write("I'm ", age, "years old")
